@@ -1,0 +1,69 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+.cardProfile
+    background: $backgroundBlodCard
+    font-family: "Roboto", sans-serif
+    color: $colorTitle
+    text-align: center
+    width: 320px
+    height: 436px
+    margin: 
+        left: 8px
+    padding: 72px 0
+    text-transform: uppercase
+    position: relative
+    overflow: hidden
+    &__image
+        width: 134px
+        height: 134px
+        object-fit: cover
+        border-radius: 50%
+        margin: 
+            bottom: 24px
+    &__name
+        font-size: 20px
+        font-weight: bold
+        margin: 0
+        padding: 0
+        letter-spacing: 0.1em
+        transform: translateX(2px)
+    &__position
+        font-size: 14px
+        font-weight: 400
+        margin-top: -5px
+        letter-spacing: 0.1em
+    &__slideShow
+        width: 500%
+        height: 100%
+        display: flex
+    &__slides
+        width: 20%
+        transition: 0.5s
+    &__navigation
+        position: absolute
+        left: 50%
+        bottom: 64px
+        transform: translate(-50%)
+    &__sliderRadio
+        width: 11px
+        height: 11px
+        border-radius: 50%
+        -webkit-appearance: none
+        background: $colorWhite
+        margin-right: 6px
+        cursor: pointer
+        transition: 0.5s
+        &:last-child
+            margin-right: 0
+        &.check
+            background: $checkedRadio
+#slide_button_1:checked ~ .slide_1
+    margin-left: 0
+#slide_button_2:checked ~ .slide_1
+    margin-left: -20%
+#slide_button_3:checked ~ .slide_1
+    margin-left: -40%
+input[name="slide_button"]
+    position: absolute
+    left: 20px
+    visibility: hidden

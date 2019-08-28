@@ -1,0 +1,67 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+#skill_one
+    display: block
+
+.skills
+    width: 661px
+    display: none
+    background: $backgroundBlodCard
+    padding:
+        top: 114px
+        left: 64px
+        right: 55px
+        bottom: 88px
+    box-sizing: border-box
+    margin-bottom: 98px
+    height: 436px
+    transform: translateX(-4px)
+    &__header
+        font-family: "RobotoCondensedBold", sans-serif
+        font-size: 24px
+        color: $colorTitle
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        padding: 
+            bottom: 12px
+    &__specification
+        font-family: "Roboto", sans-serif
+        @include font_style(14px, 400, $colorSpecification, null)
+        padding: 
+            bottom: 37px
+        line-height: 18px
+.skillBox
+    display: flex
+    justify-content: space-around
+    align-items: center
+    font-family: "Roboto", sans-serif
+    @include font_style(14px, 400, $colorTitle, null)
+    margin:
+        bottom: 11px
+    &:nth-child(2)
+        margin:
+            bottom: 10px
+    & p
+        margin: 0
+        padding: 0
+    &__nameOfSkill
+        width: 122px
+        @include font_style(null, 700, null, 0.1em)
+        text-transform: uppercase
+    &__persentSkill
+        font-weight: 400
+        transform: translateX(-2px)
+.skill
+    box-sizing: border-box
+    background: $colorWhite
+    height: 1px
+    width: 369px
+    margin: 
+        left: 10px
+        right: 15px
+    transform: translateX(2px)
+    &__level
+        background: $presentationBtn
+        height: 1px
+        transform: translateY(-1px)

@@ -1,0 +1,60 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.portfolio
+    overflow:hidden
+    & .headers
+        padding-top: 68px
+    & .headers__title
+        transform: translate(-10px,-1px)
+        &::after
+            height: 2px
+            left: 44.75%
+            bottom: -3px
+    & .headers__subtext
+        padding-top: 18px
+        padding-bottom: 80px
+    &__list
+        display: flex
+        justify-content: space-around
+        width: 662px
+        font-family: "Roboto", sans-serif
+        margin: 0 auto
+        padding-bottom: 29px
+    &__items
+        list-style: none
+        @include font_style(13.68px, 400, $portfolioListItem, 0.1em)
+        text-transform: uppercase
+        margin-right: 16px
+        position: relative
+        cursor: pointer
+        &:first-child
+            margin:
+                left: 17px;
+        &:nth-child(2)
+            margin:
+                right: 0px
+        &.active
+            transition: .3s
+            font-weight: bold
+        &.active::after
+            content: ''
+            position: absolute
+            left: -2px
+            top: 22px
+            background: $presentationBtn
+            width: 100%
+            height: 1px
+            transition: .3s
+    &__tabProjects
+        height: 175px
+        background-size: cover
+        &::after
+            content: ''
+            display: block
+            clear: both
+        & img 
+            float: left
+            width: (100% / 5)
+            height: 100%

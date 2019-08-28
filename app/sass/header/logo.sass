@@ -1,0 +1,22 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.logo
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    float: left
+    font-family: "BigNoodleTitling", sans-serif
+    text-transform: uppercase
+    color: $mainColor
+    width: 235px
+    margin: 0
+    transform: translate(8px, 3px)
+    &__img
+        @include size(29px, 45px)
+        margin:
+            right: 24px
+    &__text
+        @include font_style(40px, null, null, 0.1em)
+        transform: translate(1px, 4px)

@@ -1,0 +1,51 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.form
+    width: 770px
+    font-family: "RobotoCondensedBold",sans-serif
+    @include font_style(14px, null, $mainColor, null)
+    text-transform: uppercase
+    margin:
+        top: 88px
+        bottom: 83px
+        left: auto
+        right: auto
+    &__name,
+    &__email,
+    &__message
+        border: none
+        padding: 
+            bottom: 30px
+        border-bottom: 1px solid $borderForm
+        width: 100%
+    &__message
+        height: 85px
+        resize: none
+
+    &__name:focus,
+    &__email:focus,
+    &__message:focus
+        font-family: "RobotoCondensed", sans-serif
+        font-size: 12px
+        border-bottom: 1px solid $footerMainColor
+
+    &__messageWrapper
+        padding:
+            top: 33px
+    &__star
+        color: $star
+    &__btnWrap
+        text-align: center
+        padding: 
+            top: 45px
+        transform: translate(3px, 0px)
+    &__btn
+        background: $headerLine
+        @include font_style(null, null, $colorWhite, 0.2em)
+        text-transform: uppercase
+        border: none
+        padding: 15px 40px
+   
+    

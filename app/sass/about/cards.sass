@@ -1,0 +1,33 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.cards
+    padding:
+        top: 53px
+        bottom: 98px
+    overflow:hidden
+    &__card
+        background-color: $cardsColor
+        text-align: center
+        height: 195px
+        padding:
+            top: 30px
+        margin:
+            bottom: 20px
+    &__image
+        margin: 0 auto
+        @include size(60px, 60px)
+        & div
+            line-height: 60px
+    &__title
+        font-family: "RobotoCondensedBold", sans-serif
+        @include font_style(18px, 500, $cardsTitleColor, 0.1em)
+        text-transform: uppercase
+        padding: 
+            top: 18px
+    &__text
+        font-family: "RobotoCondensed", sans-serif
+        @include font_style(16px, 500, $cardsTextColor, null)
+        line-height: 18px
+        margin: 0 18px 22px

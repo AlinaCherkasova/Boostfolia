@@ -1,0 +1,103 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.blog
+    padding: 
+        bottom: 115px
+    & .headers
+        padding: 
+            top: 67px
+    & .headers__title
+        transform: translate(1px,-2px)
+        &:after
+            height: 2px
+            transform: translate(8px, 3px)
+    &__containerWrapper
+        display: flex
+        justify-content: space-between
+    &__singleContainer
+        width: 320px
+        background: $backgroundBlodCard
+        font-family: "Roboto", sans-serif
+        @include font_style(14px, 400, $colorTextBlockCard, null)
+        overflow: hidden
+        margin: 
+            top: 70px
+            left: 8px
+    &__singleContainer:nth-child(2)
+        margin: 
+            left: 12px
+    &__singleContainer:last-child
+        margin: 
+            right: 4px
+    &__cardImgWrap
+        height: 218px
+        background-size: cover
+        position: relative
+        pointer-events: auto
+        & img
+            @include size(100%, 100%)
+        &:hover img
+            filter: blur(5px)
+        &:hover > .blog__cardLinks
+            visibility: visible
+    &__cardLinks
+        display: flex
+        visibility: hidden
+        font-family: "Font Awesome 5 Solid"
+        font-size: 24px
+        position: absolute
+        top: 50% 
+        left: 50%
+        transform: translate(-50%, -50%)
+        & a
+            background: #e87e5d
+            color: #fae5df
+            @include size(43px, 43px)
+            line-height: 43px
+            text-align: center
+            text-decoration: none
+            border-radius: 50%
+            margin:
+                right: 21px
+            transform: translate(3px, -1px)
+        & a:last-child
+            margin: 
+                right: 0px
+        & a:hover 
+            background: #f6e5e0
+            color: #f46f45
+    &__content
+        padding: 33px 28px 21px 30px
+        transform: translateX(-2px)
+    &__cardHeader
+        margin-left: -3px
+        padding-bottom: 19px
+    &__cardHeader a
+        text-decoration: none
+        @include font_style(18px, null, $colorTextBlockCard, 0.1em)
+    &__text
+        line-height: 17px
+        padding:
+            bottom: 24px
+        letter-spacing: 0.05em
+        word-spacing: -0.05em
+    &__data
+        font-family: "RobotoCondensed", sans-serif
+        @include font_style(10px, null, $colorDataTextBlog, null)
+        padding:
+            bottom: 1px
+        & img
+            margin: 
+                right: 5px
+        & a
+            color: $colorDataTextBlog
+            text-decoration: none
+            margin: 
+                right: 10px
+            &:last-child
+                margin: 
+                    right: 0px
+        & span 
+            float: right

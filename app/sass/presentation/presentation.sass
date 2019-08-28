@@ -1,0 +1,45 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.presentation
+    display: flex
+    background: $footerMainColor
+    font-family: "Roboto", sans-serif
+    @include font_style(14px, null, $mainColor, null)
+    &__contentWrap
+        width: 50%
+        text-align: center
+        padding: 
+            top: 119px
+            bottom: 108px
+            left: 90px
+            right: 109px
+    &__contentHeader
+        @include font_style(30px, bold, $presentationHeader, null)
+        text-transform: uppercase
+        transform: translate(3px, 0px)
+    &__content
+        @include font_style(null, 400, $presentationHeader, 0.01em)
+        padding: 
+            bottom: 65px
+        line-height: 18px
+        transform: translate(4px, 13px)
+    &__button
+        @include font_style(null, bold, $cardsColor, null)
+        text-transform: uppercase
+        background: $presentationBtn
+        padding: 11px 30px 8px 30px
+        margin-left: 9px
+        box-shadow: 0 3px 0 rgba(177,16,0,0.5)
+        &:hover
+            text-decoration: none
+            color: $cardsColor
+        &:active:focus
+            background: #b11000
+            box-shadow: 0 3px 0 rgba(232,76,61,0.5)
+    &__video
+        width: 50%
+        & iframe
+            width: 100%
+            height: 100%

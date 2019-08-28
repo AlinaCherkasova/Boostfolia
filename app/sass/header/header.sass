@@ -1,0 +1,46 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+.header
+    color: $headerContent
+    position: relative
+    &__slider
+        position: absolute
+        @include size(100%, 708px)
+        top: 143px
+        z-index: -1
+        overflow: hidden
+        &Item
+            @include size(100%, 100%)
+            background: cover
+            position: absolute
+            opacity: 1
+            transition:  all ease 1s
+            &.opacity0
+                opacity: 0
+    &__content
+        font-family: "BigNoodleTitling", sans-serif
+        text-transform: uppercase
+        text-align: center
+        padding:
+            top: 307px
+        &Header
+            @include font_style(72px, null, null, 0.15em)
+            transform: translate(9px, 4px)
+        &SubText
+            @include font_style(36px, null, $headerContent, 0.1em)
+            transform: translate(5px, -10px)
+    &__scroll
+        text-align: center
+        font-family: "RobotoCondensed", sans-serif
+        @include font_style(12px, null, $colorWhite, null)
+        padding: 
+            top: 149px
+            bottom: 34px
+        transform: translate(2px, -3px)
+        &Image
+            padding:
+                bottom: 15px
+        &Text
+            letter-spacing: 0.08em
+            word-spacing: -1px

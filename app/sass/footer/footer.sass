@@ -1,0 +1,52 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.footer
+    text-align: center
+    background: $footerMainColor
+    & .logo
+        float: none
+        margin: 0 auto
+        transform: translate(1px,3px)
+        padding-bottom: 3px
+    &__logo
+        display: flex
+        flex-direction: column
+        padding: 
+            top: 47px
+        &Img
+            margin: 
+                right: 0 !important
+
+        &Text
+            color: $colorWhite
+            font-size: 24px !important
+    &__slogan
+        font-family: "RobotoCondensed", sans-serif
+        @include font_style(14px, null, $colorWhite, 0.1em)
+        text-transform: uppercase
+        transform: translateX(2px)
+        padding: 0
+        margin: 0
+
+    & .socialNetworks
+        font-family: "Font Awesome 5 Brands", sans-serif
+        padding: 
+            top: 8px
+            bottom: 58px
+        transform: translateX(4px)
+        &__link
+            color: $colorSocialNetworks
+            text-decoration: none
+            margin: 
+                right: 5px
+            &:nth-child(2)
+                margin: 
+                    right: 10px
+            &:last-child
+                margin: 
+                    right: 0px
+            &:hover
+                text-decoration: none
+                color: $headerLine

@@ -1,0 +1,88 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+.plans
+    background: $footerMainColor
+    color:  $subColor
+    & .headers
+        font-family: "RobotoCondensed", sans-serif
+        padding: 
+            top: 54px
+    & .headers__title
+        @include font_style(36px, null, $subColor, 0.2em)
+        padding: 
+            bottom: 12px
+        transform: translate(6px, -2px)
+        &::after
+            content: ""
+            width: 85px
+            height: 1px
+            position: absolute
+            bottom: 0px
+            left: 45.5%
+            background: $underlinePlansHeader
+    &__contentWrapper
+        display: flex
+        justify-content: center
+        text-align: center
+        padding: 
+            bottom: 93px
+    &__cardWrapper
+        width: 234px
+        margin:
+            top: 45px
+        border: 1px solid $footerMainColor
+        cursor: pointer
+        &.active
+            border: 1px solid $headerLine
+            .plans__cardNumber
+                color: $headerLine
+
+    &__cardHeaderWrapper
+        background: $plansCardHeader
+        padding:
+            top: 38px
+            bottom: 15px
+        text-align: center
+    &__tariff
+        font-family: "Roboto",sans-serif
+        @include font_style(14px, 700, null, null)
+        text-transform: uppercase
+        margin: 0
+        padding: 0
+    &__cardCoast
+        font-family: "Roboto",sans-serif
+        @include font_style(36px, 400, null, null)
+        margin: 0
+        padding: 0
+    &__price
+        font-family: "Roboto", sans-serif
+        font-size: 24px
+        font-weight: 400
+    &__cardContent
+        background: $plansCardBackground
+        font-family: "Roboto", sans-serif
+        @include font_style(14.13px, 300, null, null)
+        padding: 
+            top: 46px  
+            bottom: 51px
+        & .plans__cardContentRow
+            margin: 
+                bottom: 10px
+        & .plans__cardContentRow:nth-child(4)
+            margin: 
+                bottom: 74px
+    &__cardNumber
+        font-weight: 500
+    &__cardBtn
+        background: $headerLine
+        color: $colorWhite
+        text-decoration: none
+        padding: 8px 30px
+        margin: 
+            left: -8px
+        border-radius: 3px
+        &:hover
+            color: $colorWhite
+            text-decoration: none
+

@@ -1,0 +1,54 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+.carousel
+    background: $carouselbg
+    font-family: "Font Awesome 5 Solid"
+    font-size: 48px
+    &__wrapper
+        position: relative
+        height: 239px
+    &__wrap
+        @include size((7px + 225px) * 3, 61px)
+        position: absolute
+        top: 24px
+        right: 1px
+        bottom: 0
+        left: 0
+        margin: auto
+        overflow: hidden
+    &__slider
+        width: (225px * 6)
+        position: relative
+        left: 0
+        transition: all ease 1s
+        &:after
+            content: ''
+            display: block
+            clear: both
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+        float: left
+        @include size(225px, 55px)
+        line-height: 55px
+        margin:
+            right: 7px
+        &:first-child
+            transform: translate(3px, -1px)
+        &:nth-child(2)
+            transform: translate(9px, 7px)
+        &:nth-child(3)
+            transform: translate(16px, -1px)
+            margin-right: 0px
+    &__arrow_prev,
+    &__arrow_next
+        position: absolute
+        top: 50%
+        transform: translate(-43%, -37%)
+        cursor: pointer
+    &__arrow_prev
+        left: 62px
+    &__arrow_next
+        right: 29px

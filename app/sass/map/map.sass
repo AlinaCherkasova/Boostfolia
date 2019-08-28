@@ -1,0 +1,37 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.map
+    font-family: "RobotoCondensedBold", sans-serif
+    font-size: 24px
+    background: $mapLink
+
+    &__link
+        text-align: center
+        text-transform: uppercase
+        padding: 
+            top: 24px
+            bottom: 24px
+        transform: translate(19px, 0px)
+        & a
+            @include font_style(null, null, $colorWhite, 0.1em)
+        & img
+            padding: 
+                left: 2px
+        & a:hover
+            color: $colorWhite
+            text-decoration: none
+
+    &__wrapper
+        display: none
+        position: relative
+        transition: 0.9s
+        padding: 
+            bottom: 83px
+       
+    &__overlay
+        position: absolute
+        top: 0
+        width: 100%
+        min-height: 600px

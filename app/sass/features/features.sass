@@ -1,0 +1,70 @@
+@import "../utils/_vars.sass"
+@import "../utils/_fonts.sass"
+@import "../utils/_mixin.sass"
+
+.features
+    background: $footerMainColor
+    padding:
+        bottom: 51px
+    & .headers
+        font-family: "RobotoCondensed", sans-serif
+        padding:
+            top: 54px
+    & .headers__title
+        @include font_style(36px, null, $subColor, .2em)
+        padding:
+            bottom: 12px
+        transform: translate(6px, -2px)
+        &::after
+            content: ""
+            @include size(85px, 1px)
+            position: absolute
+            bottom: 0px
+            left: 45.4%
+            background: $underlinePlansHeader
+    &__wrapperContainer
+        display: flex
+        justify-content: space-around
+        font-family: "Roboto", sans-serif
+        @include font_style(18px, null, $subColor, null)
+        text-align: center
+        padding:
+            top: 34px
+    &__cardWrapper
+        position: relative
+        width: 236px
+        &:first-child .features__imgWrapper
+            transform: translate(-5px,4px)
+        &:nth-child(2) .features__imgWrapper
+            transform: translate(-1px,0px)
+        &:nth-child(3) .features__imgWrapper
+            transform: translate(10px,3px)
+        &:last-child .features__imgWrapper
+            transform: translate(16px,0px)
+        &:first-child .features__value
+            transform: translate(-1px, 0px)
+        &:nth-child(3) .features__value
+            transform: translate(10px, 1px)
+
+        &:nth-child(2) .features__items
+            transform: translate(8px, 0px)
+        &:first-child .features__items
+            transform: translate(0px, 0px)
+    &__span
+        display: none
+        position: absolute
+        bottom: 0px
+        left: 162px
+        @include font_style(48px, 300, null, null)
+    &__imgWrapper
+        @include size(48px, 48px)
+        margin: 0 auto
+        transform: translate(6px, 1px)
+    &__items
+        padding-top: 30px
+        transform: translate(17px, 0px)
+    &__value
+        @include font_style(48px, 300, null, null)
+        padding: 
+            top: 5px
+        transform: translate(5px, 1px)

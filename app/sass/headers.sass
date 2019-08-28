@@ -1,0 +1,30 @@
+@import "utils/_vars.sass"
+@import "utils/_fonts.sass"
+@import "utils/_mixin.sass"
+
+.headers
+    text-align: center
+    font-family: "BigNoodleTitling", sans-serif
+    padding: 
+        top: 89px
+    &__title
+        text-transform: uppercase
+        @include font_style(48px, 400, $colorTitle, 0.1em)
+        transform: translate(-9px, -1px);
+        position: relative
+        &::after
+            content: ""
+            width: 153px
+            height: 2px
+            position: absolute
+            bottom: 0px
+            left: 42.2%
+            background: $headerLine
+    &__subtext
+        display: inline-block
+        font-family: "Roboto", sans-serif
+        @include font_style(13.69px, 400, $mainColor, null)
+        line-height: 17px
+        width: 564px
+        padding:
+            top: 15px

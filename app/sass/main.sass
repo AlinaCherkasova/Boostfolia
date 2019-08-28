@@ -1,0 +1,51 @@
+@import "utils/_vars.sass"
+@import "utils/_fonts.sass"
+
+*
+	margin: 0
+	padding: 0
+
+p 
+	margin: 0
+	padding: 0
+	
+::placeholder
+	color: #666
+
+::selection
+	background-color: $footerMainColor
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: $cardsColor
+	&:required:valid
+		border-color: $footerMainColor
+html
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+body
+	width: 100%
+    max-width: 100%
+    overflow-x: hidden
+	&:hover
+		overflow-scrolling: touch
+	&::-webkit-scrollbar
+		display: block
+		appearance: none
+		width: 7px
+	&::-webkit-scrollbar-thumb
+		border-radius: 3px
+		background-color: $mainColor
+		box-shadow: 0 0 1px rgba(255,255,255,0.5)
+
+.container
+	width: 1046px !important
+
+
+
+
+
